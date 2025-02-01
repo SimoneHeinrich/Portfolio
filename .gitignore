@@ -1,0 +1,15 @@
+# Ausschließen von lokalen VS Code-Dateien
+.vscode/
+*.code-workspace
+
+# Ausschließen von temporären Dateien
+*.log
+*.DS_Store
+Thumbs.db
+
+# Ausschließen von Node.js (falls du npm oder andere Tools nutzt)
+node_modules/
+package-lock.json
+
+# Falls du mit Jekyll arbeitest:
+_site/
