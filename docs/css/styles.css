@@ -1,54 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
-
+/* Entferne margin oben für mobile Ansicht */
 body {
-    font-family: 'Open Sans', sans-serif;
-    background-color: #fff;
-    color: #333;
-    margin: 0;
-    padding: 0;
+    margin-top: 0;
 }
 
-.container {
-    max-width: 1200px;
-    margin: auto;
-    padding: 50px 20px;
+/* Anpassung für das Navbar-Brand-Logo */
+.navbar-brand {
+    font-weight: bold;
 }
 
-.about-section .row {
-    display: flex;
-    align-items: center;
-}
-
-.about-section img {
-    max-width: 100%;
-    border-radius: 8px;
-}
-
-.navbar {
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
+/* Projekte-Cards gleich groß machen */
 .card {
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.card:hover {
-    transform: translateY(-5px);
-}
+/* Responsive Anpassung für "Über mich" */
+@media (max-width: 768px) {
+    .about-section {
+        flex-direction: column;
+    }
 
-.card-title a {
-    text-decoration: none;
-    color: #1a0dab;
-}
-
-.card-title a:hover {
-    text-decoration: underline;
-}
-
-footer {
-    background-color: #f8f9fa;
-    padding: 20px 0;
-    color: #333;
+    .about-section img {
+        margin-bottom: 20px;
+    }
 }
