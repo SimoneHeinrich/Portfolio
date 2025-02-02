@@ -32,7 +32,7 @@ nav a:hover {
 
 /* Container */
 .container {
-    max-width: 1000px;
+    max-width: 1200px;
     margin: auto;
     padding: 50px 20px;
 }
@@ -42,14 +42,18 @@ nav a:hover {
     padding-bottom: 50px;
 }
 
-/* Portfolio */
+/* Portfolio Grid - Korrektur für gleichmäßige Größe */
 .portfolio-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    justify-content: space-between;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
 .portfolio-item {
+    flex: 1;
+    min-width: 30%;
+    max-width: 32%;
     background-color: #fff;
     padding: 15px;
     border-radius: 8px;
@@ -59,6 +63,8 @@ nav a:hover {
 
 .portfolio-item img {
     width: 100%;
+    height: 200px; /* Einheitliche Höhe */
+    object-fit: cover; /* Sorgt dafür, dass Bilder gleichmäßig beschnitten werden */
     border-radius: 8px;
 }
 
@@ -104,7 +110,12 @@ footer {
 /* Responsive Design */
 @media (max-width: 768px) {
     .portfolio-grid {
-        grid-template-columns: 1fr;
+        flex-direction: column;
+    }
+
+    .portfolio-item {
+        min-width: 100%;
+        max-width: 100%;
     }
 
     .about-section {
