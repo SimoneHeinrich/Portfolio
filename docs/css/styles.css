@@ -42,33 +42,30 @@ nav a:hover {
     padding-bottom: 50px;
 }
 
-/* Portfolio Grid - Fix für gleiche Größe & richtige Anordnung */
+/* Projekte in einer Reihe anordnen */
 .portfolio-grid {
     display: flex;
     justify-content: center; /* Zentriert die Elemente */
-    align-items: stretch; /* Sorgt für gleiche Höhe */
-    gap: 20px;
-    flex-wrap: nowrap; /* Verhindert das Umbruch der Elemente */
+    gap: 30px; /* Abstand zwischen den Cards */
+    flex-wrap: nowrap; /* Verhindert, dass sie umbrechen */
 }
 
+/* Einheitliche Größe für Projekt-Cards */
 .portfolio-item {
-    flex: 1;
-    max-width: 30%; /* Alle Items gleich groß */
+    width: 350px; /* Einheitliche Breite */
+    height: 250px; /* Einheitliche Höhe */
     background-color: #fff;
-    padding: 15px;
+    padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; /* Inhalt wird ausbalanciert */
-    align-items: center;
 }
 
+/* Projekt-Bilder ins Querformat bringen */
 .portfolio-item img {
     width: 100%;
-    height: 200px; /* Einheitliche Höhe */
-    object-fit: cover; /* Sorgt für gleiche Skalierung */
+    height: 150px; /* Einheitliche Höhe für Querformat */
+    object-fit: cover; /* Sorgt für saubere Skalierung */
     border-radius: 8px;
 }
 
