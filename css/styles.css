@@ -1,0 +1,163 @@
+/* Importieren Google Fonts für modernere Schriftarten */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: #fff; /* Setzt die Hintergrundfarbe auf Weiß */
+    color: #333; /* Die Textfarbe auf Dunkelgrau für bessere Lesbarkeit */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between; /* Für eine gleichmäßige Aufteilung */
+    padding: 0 20px; /* Fügt horizontalen Abstand hinzu */
+    background-color: #fff; /* Ändern zu Weiß */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Fügt einen Schatten unter der Navigationsleiste hinzu */
+}
+
+nav a {
+    color: #333; /* Ändert die Linkfarbe zu Dunkelgrau */
+    text-decoration: none;
+    padding: 20px 15px;
+    font-weight: 600; /* Macht den Text fett */
+}
+
+nav a:hover {
+    background-color: #f4f4f4; /* Ein leichtes Grau für den Hover-Zustand */
+}
+
+.container {
+    max-width: 1200px; /* Setzt eine maximale Breite für den Container */
+    margin: auto; /* Zentriert den Container */
+    padding: 50px 20px; /* Mehr Abstand an allen Seiten */
+}
+
+.introduction {
+    text-align: center;
+    padding-bottom: 50px; /* Fügt Abstand unter der Einführung hinzu */
+}
+
+.portfolio-link {
+    text-decoration: none; /* Entfernt die Unterstreichung */
+    color: inherit; /* Erbt die Farbe von übergeordneten Elementen */
+    display: block; /* Lässt den Link den gesamten verfügbaren Raum einnehmen */
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px; /* Vergrößert den Abstand zwischen den Elementen */
+}
+
+.portfolio-item {
+    background-color: #fff; /* Ändern zu Weiß */
+    padding: 15px;
+    border: none; /* Entfernt die Grenze */
+    border-radius: 8px; /* Runde Ecken */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Fügt Schatten hinzu */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animation für Schweben */
+}
+
+.portfolio-item:hover {
+    transform: translateY(-5px); /* Hebt das Element beim Überfahren an */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Vergrößert den Schatten beim Überfahren */
+}
+
+/* Stile für den "Über mich"-Bereich */
+.about-section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.about-content {
+    flex: 1;
+    padding-right: 20px; /* Fügt einen rechten Abstand hinzu, damit Text und Bild nicht aneinander kleben */
+    justify-content: space-between;
+}
+
+.about-image {
+    flex: 1;
+    text-align: right; /* Dies ist optional, es sei denn, Sie möchten das Bild aus ästhetischen Gründen rechts ausrichten */
+}
+
+.about-image img {
+    max-width: 100%; /* Verhindert, dass das Bild größer als sein Container ist */
+    height: auto; /* Behält das Seitenverhältnis des Bildes bei */
+}
+
+@media (max-width: 768px) {
+    .about-section {
+        flex-direction: column;
+    }
+
+    .about-content, .about-image {
+        flex-basis: 100%;
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .about-image {
+        order: -1; /* Bringt das Bild über den Text auf kleineren Bildschirmen */
+    }
+}
+/* Stile für Formularelemente */
+input, textarea, button {
+    font-family: inherit;
+    font-size: 100%;
+    margin: 10px 0;
+    border-radius: 4px;
+}
+
+input[type=text], input[type=email], textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+button {
+    background-color: #333;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+/* Anpassungen für den Footer */
+footer {
+    background-color: #fff; /* Ändern zu Weiß */
+    color: #333; /* Ändern zu Dunkelgrau */
+    text-align: center;
+    padding: 20px 10px;
+    position: relative; /* Geändert von fixed zu relative */
+    width: 100%;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Fügt Schatten oben am Footer hinzu */
+}
+
+/* Responsive Design für kleinere Bildschirme */
+@media (max-width: 1024px) {
+    .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr); /* Ändert zu zwei Spalten auf mittleren Bildschirmen */
+    }
+}
+
+@media (max-width: 768px) {
+    .portfolio-grid {
+        grid-template-columns: 1fr; /* Stapelt die Elemente in einer einzigen Spalte auf kleinen Bildschirmen */
+    }
+    nav {
+        flex-direction: column;
+        padding:0;
+    }
+    nav a {
+        padding: 10px;
+        text-align: center; /* Zentriert die Links */
+    }
+}

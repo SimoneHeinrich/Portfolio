@@ -1,18 +1,97 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simone Heinrich - Portfolio</title>
-    <style>
-        body { font-family: Arial, sans-serif; text-align: center; margin: 50px; }
-        h1 { color: #2d5dd7; }
-        p { color: #333; }
-    </style>
+    <title>Mein Portfolio</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
-    <h1>Willkommen auf meiner Portfolio-Seite</h1>
-    <p>Hier präsentiere ich meine Projekte und meine Fähigkeiten.</p>
-    <p>Schau dich um und lerne mich kennen!</p>
+    <nav>
+        <a href="#about">Über mich</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Kontakt</a>
+    </nav>
+
+    <div class="container introduction">
+        <h1>Willkommen auf meiner Homepage</h1>
+        <p>Kurze Einführung über mich und meine Arbeit.</p>
+    </div>
+
+    <div id="about" class="container about-section">
+        <div class="about-content">
+            <h2>Über mich</h2>
+            <p>Willkommen auf meiner Portfolio-Seite! Mein Name ist Simone Heinrich und ich bin eine ambitionierte
+                Wirtschaftsinformatikerin mit einer Leidenschaft für die Schnittstelle zwischen Technologie und
+                Geschäftsstrategie. Mein Weg ist geprägt von Vielseitigkeit und einer konstanten Suche nach Wissen und
+                Innovation.</p>
+
+            </p>Nach einer Ausbildung zur Rechtsanwalts- und Notarfachangestellten entdeckte ich mein Interesse für
+            organisatorische Prozesse und Datenmanagement, was mich zu einer Position in der Verwaltung der
+            evangelischen Kirche führte. Dort konnte ich nicht nur meine organisatorischen Fähigkeiten, sondern auch
+            mein Verständnis für komplexe Verwaltungsaufgaben vertiefen.</p>
+
+            </p>Mein wahres Streben liegt jedoch in der Digitalisierung und Optimierung von Geschäftsprozessen. Dies
+            führte mich dazu, meine allgemeine Fachhochschulreife nachzuholen und ein Studium der Wirtschaftsinformatik
+            zu beginnen. Während meines Studiums habe ich durch Praktika tiefgreifende Einblicke in Projektmanagement
+            und Softwareentwicklung gewonnen und konnte praktische Erfahrungen sammeln, die mein theoretisches Wissen
+            ergänzen.</p>
+
+            </p>Als alleinerziehende Mutter von vier Kindern habe ich gelernt, effizient zu arbeiten und Prioritäten zu
+            setzen – Fähigkeiten, die in der schnelllebigen IT-Welt unerlässlich sind. Ich bringe eine einzigartige
+            Kombination aus Lebenserfahrung, fachlichem Know-how und einer unermüdlichen Motivation mit, um
+            innovative Lösungen zu schaffen und bestehende Systeme zu verbessern.</p>
+
+            </p>In meinem Portfolio finden Sie eine Auswahl an Projekten, die meine Fähigkeiten und mein Engagement für
+            exzellente Ergebnisse widerspiegeln. Ich freue mich darauf, mein Wissen in einer beruflichen
+            Herausforderung anzuwenden und weiter zu vertiefen.</p>
+        </div>
+        <div class="about-image">
+            <img src="images/Bild1.JPG" alt="Bild">
+        </div>
+    </div>
+
+
+    <div id="portfolio" class="container portfolio-grid">
+        <a href="documents/ProcessBookGlobos.pdf" target="_blank" class="portfolio-link">
+            <div class="portfolio-item">
+                <h3>Globos</h3>
+                <img src="images/ProcessBookGlobos.PNG" alt="Projekt Globos" style="width:100%;">
+                <p>Entwicklung eines innovativen plattformbasierten Geschäftsmodells</p>
+            </div>
+        </a>
+        <a href="documents/Projekt2.pdf" target="_blank" class="portfolio-link">
+            <div class="portfolio-item">
+                <h3>Projekt 2</h3>
+                <img src="projekt2.jpg" alt="Projekt 2 Bild" style="width:100%;">
+                <p>Beschreibung von Projekt 2.</p>
+            </div>
+        </a>
+        <a href="documents/Projekt3.pdf" target="_blank" class="portfolio-link">
+            <div class="portfolio-item">
+                <h3>Projekt 3</h3>
+                <img src="projekt3.jpg" alt="Projekt 3 Bild" style="width:100%;">
+                <p>Beschreibung von Projekt 3.</p>
+            </div>
+        </a>
+    </div>
+
+
+    <div id="contact" class="container">
+        <h2>Kontakt</h2>
+        <form action="send_form.php" method="post">
+            <input type="text" id="name" name="name" placeholder="Ihr Name">
+            <input type="email" id="email" name="email" placeholder="Ihre E-Mail-Adresse">
+            <textarea id="message" name="message" placeholder="Ihre Nachricht"></textarea>
+            <button type="submit">Senden</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>© 2025 Simone Heinrich. Alle Rechte vorbehalten.</p>
+    </footer>
 </body>
+
 </html>
