@@ -43,29 +43,32 @@ nav a:hover {
     padding-bottom: 50px;
 }
 
-/* "Meine Projekte" Überschrift */
-.projects-title {
-    text-align: center;
-    font-size: 1.8em;
-    font-weight: bold;
-    margin-bottom: 20px;
+/* Portfolio-Bereich */
+#portfolio {
+    text-align: center; /* Überschrift und Cards zentrieren */
+    margin-top: 50px;
 }
 
-/* Projekte in einer Reihe anordnen */
+#portfolio h2 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Projekt-Grid für gleichmäßige Anordnung */
 .portfolio-grid {
     display: flex;
     justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-    align-items: center;
+    gap: 30px; /* Abstand zwischen den Projektkarten */
+    flex-wrap: wrap; /* Falls kein Platz ist, umbrechen */
 }
 
-/* Einheitliche Größe für Projekt-Cards (Querformat) */
+/* Projekt-Cards: Querformat, gleichmäßige Größe */
 .portfolio-item {
-    width: 400px; /* Einheitliche Breite */
-    height: 220px; /* Einheitliche Höhe für Querformat */
+    width: 350px; /* Breite für Querformat */
+    height: 220px; /* Höhe für Querformat */
     background-color: #fff;
-    padding: 20px;
+    padding: 15px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
@@ -74,15 +77,15 @@ nav a:hover {
     justify-content: space-between;
 }
 
-/* Projekt-Bilder im Querformat */
+/* Projektbilder richtig ins Querformat setzen */
 .portfolio-item img {
     width: 100%;
     height: 120px; /* Einheitliche Höhe für Querformat */
-    object-fit: cover;
+    object-fit: cover; /* Schneidet das Bild sauber zu */
     border-radius: 8px;
 }
 
-/* Hover-Effekt für Cards */
+/* Hover-Effekt für Projekt-Cards */
 .portfolio-item:hover {
     transform: translateY(-5px);
     transition: 0.3s ease-in-out;
@@ -122,7 +125,7 @@ footer {
     box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Responsive Design */
+/* Responsive Anpassungen */
 @media (max-width: 1024px) {
     .portfolio-grid {
         flex-wrap: wrap;
@@ -130,16 +133,36 @@ footer {
     }
 
     .portfolio-item {
-        width: 90%;
+        width: 90%; /* Etwas größer auf mittleren Bildschirmen */
     }
 }
 
 @media (max-width: 768px) {
     .portfolio-grid {
         flex-direction: column;
+        align-items: center;
     }
 
     .portfolio-item {
         width: 100%;
+    }
+
+    .about-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-content, .about-image {
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+
+    .about-image {
+        order: -1;
+    }
+
+    nav {
+        flex-direction: column;
+        text-align: center;
     }
 }
