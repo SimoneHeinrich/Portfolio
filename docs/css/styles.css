@@ -37,38 +37,52 @@ nav a:hover {
     padding: 50px 20px;
 }
 
+/* Einführung */
 .introduction {
     text-align: center;
     padding-bottom: 50px;
 }
 
+/* "Meine Projekte" Überschrift */
+.projects-title {
+    text-align: center;
+    font-size: 1.8em;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
 /* Projekte in einer Reihe anordnen */
 .portfolio-grid {
     display: flex;
-    justify-content: center; /* Zentriert die Elemente */
-    gap: 30px; /* Abstand zwischen den Cards */
-    flex-wrap: nowrap; /* Verhindert, dass sie umbrechen */
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    align-items: center;
 }
 
-/* Einheitliche Größe für Projekt-Cards */
+/* Einheitliche Größe für Projekt-Cards (Querformat) */
 .portfolio-item {
-    width: 350px; /* Einheitliche Breite */
-    height: 250px; /* Einheitliche Höhe */
+    width: 400px; /* Einheitliche Breite */
+    height: 220px; /* Einheitliche Höhe für Querformat */
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-/* Projekt-Bilder ins Querformat bringen */
+/* Projekt-Bilder im Querformat */
 .portfolio-item img {
     width: 100%;
-    height: 150px; /* Einheitliche Höhe für Querformat */
-    object-fit: cover; /* Sorgt für saubere Skalierung */
+    height: 120px; /* Einheitliche Höhe für Querformat */
+    object-fit: cover;
     border-radius: 8px;
 }
 
+/* Hover-Effekt für Cards */
 .portfolio-item:hover {
     transform: translateY(-5px);
     transition: 0.3s ease-in-out;
@@ -112,12 +126,11 @@ footer {
 @media (max-width: 1024px) {
     .portfolio-grid {
         flex-wrap: wrap;
-        justify-content: space-around;
+        justify-content: center;
     }
 
     .portfolio-item {
-        flex: 1 1 45%;
-        max-width: 45%;
+        width: 90%;
     }
 }
 
@@ -127,26 +140,6 @@ footer {
     }
 
     .portfolio-item {
-        min-width: 100%;
-        max-width: 100%;
-    }
-
-    .about-section {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .about-content, .about-image {
-        flex-basis: 100%;
-        max-width: 100%;
-    }
-
-    .about-image {
-        order: -1;
-    }
-
-    nav {
-        flex-direction: column;
-        text-align: center;
+        width: 100%;
     }
 }
