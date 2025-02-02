@@ -1,4 +1,4 @@
-/* Importieren Google Fonts */
+/* Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
 
 body {
@@ -37,83 +37,6 @@ nav a:hover {
     padding: 50px 20px;
 }
 
-/* Einführung */
-.introduction {
-    text-align: center;
-    padding-bottom: 50px;
-}
-
-/* Portfolio-Bereich */
-#portfolio {
-    text-align: center; /* Überschrift und Cards zentrieren */
-    margin-top: 50px;
-}
-
-#portfolio h2 {
-    width: 100%;
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-/* Projekt-Grid für gleichmäßige Anordnung */
-.portfolio-grid {
-    display: flex;
-    justify-content: center;
-    gap: 30px; /* Abstand zwischen den Projektkarten */
-    flex-wrap: wrap; /* Falls kein Platz ist, umbrechen */
-}
-
-/* Projekt-Cards: Querformat, gleichmäßige Größe */
-.portfolio-item {
-    width: 350px; /* Breite für Querformat */
-    height: 220px; /* Höhe für Querformat */
-    background-color: #fff;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-/* Projektbilder richtig ins Querformat setzen */
-.portfolio-item img {
-    width: 100%;
-    height: 120px; /* Einheitliche Höhe für Querformat */
-    object-fit: cover; /* Schneidet das Bild sauber zu */
-    border-radius: 8px;
-}
-
-/* Hover-Effekt für Projekt-Cards */
-.portfolio-item:hover {
-    transform: translateY(-5px);
-    transition: 0.3s ease-in-out;
-}
-
-/* Über mich */
-.about-section {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-}
-
-.about-content {
-    flex: 1;
-    padding-right: 20px;
-}
-
-.about-image {
-    flex: 1;
-    text-align: center;
-}
-
-.about-image img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-}
-
 /* Footer */
 footer {
     background-color: #fff;
@@ -123,46 +46,4 @@ footer {
     position: relative;
     width: 100%;
     box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
-}
-
-/* Responsive Anpassungen */
-@media (max-width: 1024px) {
-    .portfolio-grid {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .portfolio-item {
-        width: 90%; /* Etwas größer auf mittleren Bildschirmen */
-    }
-}
-
-@media (max-width: 768px) {
-    .portfolio-grid {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .portfolio-item {
-        width: 100%;
-    }
-
-    .about-section {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .about-content, .about-image {
-        flex-basis: 100%;
-        max-width: 100%;
-    }
-
-    .about-image {
-        order: -1;
-    }
-
-    nav {
-        flex-direction: column;
-        text-align: center;
-    }
 }

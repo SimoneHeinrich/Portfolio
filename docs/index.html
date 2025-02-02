@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simone Heinrich - Portfolio</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
 </head>
 
 <body>
@@ -47,35 +48,49 @@
     </div>
 
     <!-- Portfolio -->
-    <div id="portfolio" class="container">
-        <h2 class="projects-title">Meine Projekte</h2>
+    <!-- Portfolio -->
+    <div id="portfolio" class="container text-center">
+        <h2 class="mb-4">Meine Projekte</h2>
 
-        <div class="portfolio-grid">
-            <a href="documents/ProcessBookGlobos.pdf" target="_blank" class="portfolio-link">
-                <div class="portfolio-item">
-                    <h3>Globos</h3>
-                    <img src="images/ProcessBookGlobos.PNG" alt="Projekt Globos">
-                    <p>Entwicklung eines innovativen plattformbasierten Geschäftsmodells mit Echtzeit-KI-Übersetzung.</p>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <!-- Globos -->
+            <div class="col">
+                <div class="card h-100">
+                    <img src="images/ProcessBookGlobos.PNG" class="card-img-top img-fluid" alt="Projekt Globos">
+                    <div class="card-body">
+                        <h5 class="card-title"><a href="documents/ProcessBookGlobos.pdf" target="_blank">Globos</a></h5>
+                        <p class="card-text">Entwicklung eines innovativen plattformbasierten Geschäftsmodells mit
+                            Echtzeit-KI-Übersetzung.</p>
+                    </div>
                 </div>
-            </a>
+            </div>
 
-            <a href="documents/PetMatch.pdf" target="_blank" class="portfolio-link">
-                <div class="portfolio-item">
-                    <h3>PetMatch</h3>
-                    <img src="images/PetMatch.png" alt="Projekt PetMatch">
-                    <p>Eine Web-App zur Vernetzung von Hundehaltern, entwickelt mit Flask, Python, Bootstrap und SQLite.</p>
+            <!-- PetMatch -->
+            <div class="col">
+                <div class="card h-100">
+                    <img src="images/PetMatch.png" class="card-img-top img-fluid" alt="Projekt PetMatch">
+                    <div class="card-body">
+                        <h5 class="card-title"><a href="documents/PetMatch.pdf" target="_blank">PetMatch</a></h5>
+                        <p class="card-text">Eine Web-App zur Vernetzung von Hundehaltern, entwickelt mit Flask, Python,
+                            Bootstrap und SQLite.</p>
+                    </div>
                 </div>
-            </a>
+            </div>
 
-            <a href="documents/Coinify.pdf" target="_blank" class="portfolio-link">
-                <div class="portfolio-item">
-                    <h3>Coinify</h3>
-                    <img src="images/Coinify.png" alt="Projekt Coinify">
-                    <p>Eine Android-App zur Aufgabenverwaltung für Kinder, programmiert mit Java und Firebase.</p>
+            <!-- Coinify -->
+            <div class="col">
+                <div class="card h-100">
+                    <img src="images/Coinify.png" class="card-img-top img-fluid" alt="Projekt Coinify">
+                    <div class="card-body">
+                        <h5 class="card-title"><a href="documents/Coinify.pdf" target="_blank">Coinify</a></h5>
+                        <p class="card-text">Eine Android-App zur Aufgabenverwaltung für Kinder, programmiert mit Java
+                            und Firebase.</p>
+                    </div>
                 </div>
-            </a>
+            </div>
         </div>
     </div>
+
 
     <footer>
         <p>© 2025 Simone Heinrich. Alle Rechte vorbehalten.</p>
