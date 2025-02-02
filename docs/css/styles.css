@@ -1,4 +1,4 @@
-/* Importieren Google Fonts für modernere Schriftarten */
+/* Importieren Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
 
 body {
@@ -6,158 +6,123 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background: #fff; /* Setzt die Hintergrundfarbe auf Weiß */
-    color: #333; /* Die Textfarbe auf Dunkelgrau für bessere Lesbarkeit */
+    background: #fff;
+    color: #333;
 }
 
+/* Navigation */
 nav {
     display: flex;
-    justify-content: space-between; /* Für eine gleichmäßige Aufteilung */
-    padding: 0 20px; /* Fügt horizontalen Abstand hinzu */
-    background-color: #fff; /* Ändern zu Weiß */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Fügt einen Schatten unter der Navigationsleiste hinzu */
+    justify-content: center;
+    padding: 15px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 nav a {
-    color: #333; /* Ändert die Linkfarbe zu Dunkelgrau */
+    color: #333;
     text-decoration: none;
-    padding: 20px 15px;
-    font-weight: 600; /* Macht den Text fett */
+    padding: 10px 20px;
+    font-weight: 600;
 }
 
 nav a:hover {
-    background-color: #f4f4f4; /* Ein leichtes Grau für den Hover-Zustand */
+    background-color: #f4f4f4;
 }
 
+/* Container */
 .container {
-    max-width: 1200px; /* Setzt eine maximale Breite für den Container */
-    margin: auto; /* Zentriert den Container */
-    padding: 50px 20px; /* Mehr Abstand an allen Seiten */
+    max-width: 1000px;
+    margin: auto;
+    padding: 50px 20px;
 }
 
 .introduction {
     text-align: center;
-    padding-bottom: 50px; /* Fügt Abstand unter der Einführung hinzu */
+    padding-bottom: 50px;
 }
 
-.portfolio-link {
-    text-decoration: none; /* Entfernt die Unterstreichung */
-    color: inherit; /* Erbt die Farbe von übergeordneten Elementen */
-    display: block; /* Lässt den Link den gesamten verfügbaren Raum einnehmen */
-}
-
+/* Portfolio */
 .portfolio-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 30px; /* Vergrößert den Abstand zwischen den Elementen */
+    gap: 20px;
 }
 
 .portfolio-item {
-    background-color: #fff; /* Ändern zu Weiß */
+    background-color: #fff;
     padding: 15px;
-    border: none; /* Entfernt die Grenze */
-    border-radius: 8px; /* Runde Ecken */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Fügt Schatten hinzu */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animation für Schweben */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.portfolio-item img {
+    width: 100%;
+    border-radius: 8px;
 }
 
 .portfolio-item:hover {
-    transform: translateY(-5px); /* Hebt das Element beim Überfahren an */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Vergrößert den Schatten beim Überfahren */
+    transform: translateY(-5px);
+    transition: 0.3s ease-in-out;
 }
 
-/* Stile für den "Über mich"-Bereich */
+/* Über mich */
 .about-section {
     display: flex;
     flex-wrap: wrap;
-    align-items: flex-start;
+    align-items: center;
 }
 
 .about-content {
     flex: 1;
-    padding-right: 20px; /* Fügt einen rechten Abstand hinzu, damit Text und Bild nicht aneinander kleben */
-    justify-content: space-between;
+    padding-right: 20px;
 }
 
 .about-image {
     flex: 1;
-    text-align: right; /* Dies ist optional, es sei denn, Sie möchten das Bild aus ästhetischen Gründen rechts ausrichten */
+    text-align: center;
 }
 
 .about-image img {
-    max-width: 100%; /* Verhindert, dass das Bild größer als sein Container ist */
-    height: auto; /* Behält das Seitenverhältnis des Bildes bei */
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
 }
 
+/* Footer */
+footer {
+    background-color: #fff;
+    color: #333;
+    text-align: center;
+    padding: 20px 10px;
+    position: relative;
+    width: 100%;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+
     .about-section {
         flex-direction: column;
+        text-align: center;
     }
 
     .about-content, .about-image {
         flex-basis: 100%;
         max-width: 100%;
-        text-align: center;
     }
 
     .about-image {
-        order: -1; /* Bringt das Bild über den Text auf kleineren Bildschirmen */
+        order: -1;
     }
-}
-/* Stile für Formularelemente */
-input, textarea, button {
-    font-family: inherit;
-    font-size: 100%;
-    margin: 10px 0;
-    border-radius: 4px;
-}
 
-input[type=text], input[type=email], textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-}
-
-button {
-    background-color: #333;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #555;
-}
-
-/* Anpassungen für den Footer */
-footer {
-    background-color: #fff; /* Ändern zu Weiß */
-    color: #333; /* Ändern zu Dunkelgrau */
-    text-align: center;
-    padding: 20px 10px;
-    position: relative; /* Geändert von fixed zu relative */
-    width: 100%;
-    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Fügt Schatten oben am Footer hinzu */
-}
-
-/* Responsive Design für kleinere Bildschirme */
-@media (max-width: 1024px) {
-    .portfolio-grid {
-        grid-template-columns: repeat(2, 1fr); /* Ändert zu zwei Spalten auf mittleren Bildschirmen */
-    }
-}
-
-@media (max-width: 768px) {
-    .portfolio-grid {
-        grid-template-columns: 1fr; /* Stapelt die Elemente in einer einzigen Spalte auf kleinen Bildschirmen */
-    }
     nav {
         flex-direction: column;
-        padding:0;
-    }
-    nav a {
-        padding: 10px;
-        text-align: center; /* Zentriert die Links */
+        text-align: center;
     }
 }
