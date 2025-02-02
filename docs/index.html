@@ -32,16 +32,18 @@
     </nav>
 
     <!-- Über mich mit flexibler Anordnung -->
-    <div id="about" class="container my-5 py-4">
+    <div id="about" class="container my-5">
         <div class="row align-items-center">
-            <div class="col-md-4 order-md-1 order-2">
+            <!-- Textbereich -->
+            <div class="col-md-7">
                 <h2 class="mt-4">Über mich</h2>
                 <p>Hallo, ich bin Simone Heinrich, leidenschaftliche UX/UI-Designerin mit einem starken Interesse an
                     datengetriebenem Storytelling. Mein Herz schlägt für die Gestaltung intuitiver und ästhetisch
                     ansprechender Benutzeroberflächen, die eine nahtlose und angenehme User Experience ermöglichen.</p>
 
                 <p>Während meines Wirtschaftsinformatik-Studiums habe ich UX/UI-Design als meine größte Leidenschaft
-                    entdeckt und mein Wissen durch praxisnahe Projekte und Online-Zertifikate vertieft.</p>
+                    entdeckt und mein Wissen durch praxisnahe Projekte und Online-Zertifikate vertieft. In den letzten
+                    Monaten habe ich mich intensiv mit <strong>Figma, Proto.io und Miro</strong> beschäftigt.</p>
 
                 <p><strong>Meine bisherigen Erfahrungen umfassen:</strong></p>
                 <ul>
@@ -49,9 +51,16 @@
                     <li><strong>Datenanalyse & Storytelling</strong> – Visualisierung und Interpretation von Daten</li>
                     <li><strong>Technologien</strong> – HTML, CSS, Bootstrap, Firebase, SQLite, Python, Java, Flask</li>
                 </ul>
+
+                <!-- Hinweis zum Portfolio -->
+                <p class="mt-4"><em>Diese Seite dient als Plattform, um meine Fortschritte und Designs zu dokumentieren.
+                        Sie ist kein offizielles Portfolio, sondern ein laufendes Experiment, das ich nach und nach
+                        weiterentwickle.</em></p>
             </div>
-            <div class="col-md-4 text-center order-md-2 order-1">
-                <img src="images/Bild1.JPG" alt="Portraitbild" class="img-fluid rounded">
+
+            <!-- Bild, das sich auf größeren Bildschirmen weiter nach rechts verschiebt -->
+            <div class="col-md-5 text-md-end">
+                <img src="images/Bild1.JPG" alt="Portraitbild" class="img-fluid d-block ms-md-auto">
             </div>
         </div>
     </div>
@@ -64,7 +73,8 @@
             <!-- Globos -->
             <div class="col">
                 <div class="card h-100">
-                    <img src="images/ProcessBookGlobos.PNG" class="img-fluid w-100" style="height: 180px; object-fit: cover; object-position: top" alt="Projekt Globos">
+                    <img src="images/ProcessBookGlobos.PNG" class="img-fluid w-100"
+                        style="height: 180px; object-fit: cover; object-position: top" alt="Projekt Globos">
                     <div class="card-body">
                         <h5 class="card-title"><a href="documents/ProcessBookGlobos.pdf" target="_blank">Globos</a></h5>
                         <p class="card-text">Entwicklung eines innovativen plattformbasierten Geschäftsmodells mit
@@ -76,7 +86,8 @@
             <!-- PetMatch -->
             <div class="col">
                 <div class="card h-100">
-                    <img src="images/PetMatch.png" alt="Projekt PetMatch" class="img-fluid w-100" style="height: 180px; object-fit: cover;">
+                    <img src="images/PetMatch.png" alt="Projekt PetMatch" class="img-fluid w-100"
+                        style="height: 180px; object-fit: cover;">
                     <div class="card-body">
                         <h5 class="card-title"><a href="documents/PetMatch.pdf" target="_blank">PetMatch</a></h5>
                         <p class="card-text">Eine Web-App zur Vernetzung von Hundehaltern, entwickelt mit Flask, Python,
@@ -88,7 +99,8 @@
             <!-- Coinify -->
             <div class="col">
                 <div class="card h-100">
-                    <img src="images/Coinify.png" alt="Projekt Coinify" class="img-fluid w-100" style="height: 180px; object-fit: cover; object-position: top;">
+                    <img src="images/Coinify.png" alt="Projekt Coinify" class="img-fluid w-100"
+                        style="height: 180px; object-fit: cover; object-position: top;">
                     <div class="card-body">
                         <h5 class="card-title"><a href="documents/Coinify.pdf" target="_blank">Coinify</a></h5>
                         <p class="card-text">Eine Android-App zur Aufgabenverwaltung für Kinder, programmiert mit Java
