@@ -7,60 +7,55 @@
     <title>Simone Heinrich - Portfolio</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 
 <body>
-    <!-- Navbar mit Hamburger Menü -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <!-- Navigation mit Hamburger-Menü für Mobilgeräte -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
         <div class="container">
-            <a class="navbar-brand" href="#">Simone Heinrich</a>
+            <a class="navbar-brand fw-bold" href="#">Simone Heinrich</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">Über mich</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#portfolio">Portfolio</a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#about">Über mich</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Über mich mit flexibler Anordnung -->
+    <!-- Einführung -->
+    <div class="container text-center my-5">
+        <h1>Willkommen auf meiner Portfolio-Seite</h1>
+        <p>Hier präsentiere ich meine Arbeiten im Bereich UX/UI-Design, Datenanalyse & Storytelling.</p>
+    </div>
+
+    <!-- Über mich: Bild über dem Text auf Mobilgeräten, rechts daneben auf größeren Bildschirmen -->
     <div id="about" class="container my-5">
         <div class="row align-items-center">
-            <!-- Textbereich -->
-            <div class="col-md-7">
+            <!-- Bild: Auf großen Bildschirmen rechts, auf mobilen zuerst -->
+            <div class="col-lg-4 order-lg-2 order-1 text-lg-end text-center mb-4 mb-lg-0">
+                <img src="images/Bild1.JPG" class="img-fluid rounded shadow" alt="Portraitbild">
+            </div>
+            <!-- Text: Auf großen Bildschirmen links, auf mobilen darunter -->
+            <div class="col-lg-8 order-lg-1 order-2">
                 <h2 class="mt-4">Über mich</h2>
                 <p>Hallo, ich bin Simone Heinrich, leidenschaftliche UX/UI-Designerin mit einem starken Interesse an
                     datengetriebenem Storytelling. Mein Herz schlägt für die Gestaltung intuitiver und ästhetisch
-                    ansprechender Benutzeroberflächen, die eine nahtlose und angenehme User Experience ermöglichen.</p>
-
+                    ansprechender Benutzeroberflächen.</p>
                 <p>Während meines Wirtschaftsinformatik-Studiums habe ich UX/UI-Design als meine größte Leidenschaft
                     entdeckt und mein Wissen durch praxisnahe Projekte und Online-Zertifikate vertieft. In den letzten
                     Monaten habe ich mich intensiv mit <strong>Figma, Proto.io und Miro</strong> beschäftigt.</p>
-
-                <p><strong>Meine bisherigen Erfahrungen umfassen:</strong></p>
+                <p><em>Diese Seite dient als Plattform, um meine Fortschritte und Designs zu dokumentieren. Sie ist
+                        kein offizielles Portfolio, sondern ein laufendes Experiment, das ich nach und nach
+                        weiterentwickle.</em></p>
                 <ul>
                     <li><strong>UX/UI-Design</strong> – Wireframing, Prototyping und High-Fidelity-Designs</li>
                     <li><strong>Datenanalyse & Storytelling</strong> – Visualisierung und Interpretation von Daten</li>
                     <li><strong>Technologien</strong> – HTML, CSS, Bootstrap, Firebase, SQLite, Python, Java, Flask</li>
                 </ul>
-
-                <!-- Hinweis zum Portfolio -->
-                <p class="mt-4"><em>Diese Seite dient als Plattform, um meine Fortschritte und Designs zu dokumentieren.
-                        Sie ist kein offizielles Portfolio, sondern ein laufendes Experiment, das ich nach und nach
-                        weiterentwickle.</em></p>
-            </div>
-
-            <!-- Bild, das sich auf größeren Bildschirmen weiter nach rechts verschiebt -->
-            <div class="col-md-5 text-md-end">
-                <img src="images/Bild1.JPG" alt="Portraitbild" class="img-fluid d-block ms-md-auto">
             </div>
         </div>
     </div>
@@ -72,7 +67,7 @@
         <div class="row row-cols-1 row-cols-md-3 g-4">
             <!-- Globos -->
             <div class="col">
-                <div class="card h-100">
+                <div class="card h-100 shadow-sm">
                     <img src="images/ProcessBookGlobos.PNG" class="img-fluid w-100"
                         style="height: 180px; object-fit: cover; object-position: top" alt="Projekt Globos">
                     <div class="card-body">
@@ -85,7 +80,7 @@
 
             <!-- PetMatch -->
             <div class="col">
-                <div class="card h-100">
+                <div class="card h-100 shadow-sm">
                     <img src="images/PetMatch.png" alt="Projekt PetMatch" class="img-fluid w-100"
                         style="height: 180px; object-fit: cover;">
                     <div class="card-body">
@@ -98,7 +93,7 @@
 
             <!-- Coinify -->
             <div class="col">
-                <div class="card h-100">
+                <div class="card h-100 shadow-sm">
                     <img src="images/Coinify.png" alt="Projekt Coinify" class="img-fluid w-100"
                         style="height: 180px; object-fit: cover; object-position: top;">
                     <div class="card-body">
@@ -111,9 +106,11 @@
         </div>
     </div>
 
-    <footer class="text-center py-3">
+    <footer class="text-center py-4">
         <p>© 2025 Simone Heinrich. Alle Rechte vorbehalten.</p>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
