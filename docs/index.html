@@ -10,57 +10,64 @@
 </head>
 
 <body>
-    <nav>
-        <a href="#about">Über mich</a>
-        <a href="#portfolio">Portfolio</a>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">Simone Heinrich</a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">Über mich</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+                </ul>
+            </div>
+        </div>
     </nav>
 
-    <div class="container introduction">
+    <div class="container text-center mt-4">
         <h1>Willkommen auf meiner Portfolio-Seite</h1>
         <p>Hier präsentiere ich meine Arbeiten im Bereich UX/UI-Design, Datenanalyse & Storytelling.</p>
     </div>
 
     <!-- Über mich -->
-    <div id="about" class="container about-section">
-        <div class="about-content">
-            <h2>Über mich</h2>
-            <p>Hallo, ich bin Simone Heinrich, leidenschaftliche UX/UI-Designerin mit einem starken Interesse an
-                datengetriebenem Storytelling. Mein Herz schlägt für die Gestaltung intuitiver und ästhetisch
-                ansprechender Benutzeroberflächen, die eine nahtlose und angenehme User Experience ermöglichen.</p>
+    <div id="about" class="container mt-5">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <h2>Über mich</h2>
+                <p>Hallo, ich bin Simone Heinrich, leidenschaftliche UX/UI-Designerin mit einem starken Interesse an
+                    datengetriebenem Storytelling. Mein Herz schlägt für die Gestaltung intuitiver und ästhetisch
+                    ansprechender Benutzeroberflächen, die eine nahtlose und angenehme User Experience ermöglichen.</p>
 
-            <p>Während meines Wirtschaftsinformatik-Studiums habe ich UX/UI-Design als meine größte Leidenschaft
-                entdeckt und mein Wissen durch praxisnahe Projekte und Online-Zertifikate vertieft. In den letzten
-                Monaten habe ich mich intensiv mit <strong>Figma, Proto.io und Miro </strong> beschäftigt.</p>
+                <p>Während meines Wirtschaftsinformatik-Studiums habe ich UX/UI-Design als meine größte Leidenschaft
+                    entdeckt und mein Wissen durch praxisnahe Projekte und Online-Zertifikate vertieft. In den letzten
+                    Monaten habe ich mich intensiv mit <strong>Figma, Proto.io und Miro </strong> beschäftigt.</p>
 
-            <p>Meine bisherigen Erfahrungen umfassen unter anderem:</p>
-            <ul>
-                <li><strong>UX/UI-Design</strong> – Wireframing, Prototyping und High-Fidelity-Designs</li>
-                <li><strong>Datenanalyse & Storytelling</strong> – Visualisierung und Interpretation von Daten</li>
-                <li><strong>Technologien</strong> – HTML, CSS, Bootstrap, Firebase, SQLite, Python, Java, Flask</li>
-            </ul>
+                <p>Meine bisherigen Erfahrungen umfassen unter anderem:</p>
+                <ul>
+                    <li><strong>UX/UI-Design</strong> – Wireframing, Prototyping und High-Fidelity-Designs</li>
+                    <li><strong>Datenanalyse & Storytelling</strong> – Visualisierung und Interpretation von Daten</li>
+                    <li><strong>Technologien</strong> – HTML, CSS, Bootstrap, Firebase, SQLite, Python, Java, Flask</li>
+                </ul>
 
-            <p>Diese Seite dient als Plattform, um meine Fortschritte und Designs zu dokumentieren. Sie ist kein
-                offizielles Portfolio, sondern ein laufendes Experiment, das ich nach und nach weiterentwickle.</p>
-        </div>
-        <div class="about-image">
-            <img src="images/Bild1.JPG" alt="Portraitbild">
+                <p>Diese Seite dient als Plattform, um meine Fortschritte und Designs zu dokumentieren. Sie ist kein
+                    offizielles Portfolio, sondern ein laufendes Experiment, das ich nach und nach weiterentwickle.</p>
+            </div>
+            <div class="col-md-6 text-center">
+                <img src="images/Bild1.JPG" alt="Portraitbild" class="img-fluid rounded">
+            </div>
         </div>
     </div>
 
     <!-- Portfolio -->
-    <!-- Portfolio -->
-    <div id="portfolio" class="container text-center">
+    <div id="portfolio" class="container text-center mt-5">
         <h2 class="mb-4">Meine Projekte</h2>
 
         <div class="row row-cols-1 row-cols-md-3 g-4">
             <!-- Globos -->
             <div class="col">
                 <div class="card h-100">
-                    <img src="images/ProcessBookGlobos.PNG" class="card-img-top img-fluid" alt="Projekt Globos">
+                    <img src="images/ProcessBookGlobos.PNG" class="card-img-top img-fluid w-100" style="height: 200px; object-fit: cover;" alt="Projekt Globos">
                     <div class="card-body">
                         <h5 class="card-title"><a href="documents/ProcessBookGlobos.pdf" target="_blank">Globos</a></h5>
-                        <p class="card-text">Entwicklung eines innovativen plattformbasierten Geschäftsmodells mit
-                            Echtzeit-KI-Übersetzung.</p>
+                        <p class="card-text">Entwicklung eines innovativen plattformbasierten Geschäftsmodells mit Echtzeit-KI-Übersetzung.</p>
                     </div>
                 </div>
             </div>
@@ -68,11 +75,10 @@
             <!-- PetMatch -->
             <div class="col">
                 <div class="card h-100">
-                    <img src="images/PetMatch.png" alt="Projekt PetMatch" class="img-fluid w-100" style="height: 180px; object-fit: cover;">
+                    <img src="images/PetMatch.png" class="card-img-top img-fluid w-100" style="height: 200px; object-fit: cover;" alt="Projekt PetMatch">
                     <div class="card-body">
                         <h5 class="card-title"><a href="documents/PetMatch.pdf" target="_blank">PetMatch</a></h5>
-                        <p class="card-text">Eine Web-App zur Vernetzung von Hundehaltern, entwickelt mit Flask, Python,
-                            Bootstrap und SQLite.</p>
+                        <p class="card-text">Eine Web-App zur Vernetzung von Hundehaltern, entwickelt mit Flask, Python, Bootstrap und SQLite.</p>
                     </div>
                 </div>
             </div>
@@ -80,21 +86,20 @@
             <!-- Coinify -->
             <div class="col">
                 <div class="card h-100">
-                    <img src="images/Coinify.png" alt="Projekt Coinify" class="img-fluid w-100" style="height: 180px; object-fit: cover; object-position: top;">
+                    <img src="images/Coinify.png" class="card-img-top img-fluid w-100" style="height: 200px; object-fit: cover;" alt="Projekt Coinify">
                     <div class="card-body">
                         <h5 class="card-title"><a href="documents/Coinify.pdf" target="_blank">Coinify</a></h5>
-                        <p class="card-text">Eine Android-App zur Aufgabenverwaltung für Kinder, programmiert mit Java
-                            und Firebase.</p>
+                        <p class="card-text">Eine Android-App zur Aufgabenverwaltung für Kinder, programmiert mit Java und Firebase.</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-
-    <footer>
+    <footer class="text-center mt-5 py-3 bg-light">
         <p>© 2025 Simone Heinrich. Alle Rechte vorbehalten.</p>
     </footer>
+
 </body>
 
 </html>
