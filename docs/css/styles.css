@@ -1,73 +1,92 @@
+/* Dezentes, professionelles Farbschema */
 :root {
-    --primary-color: #6E9BF5;
-    --secondary-color: #986EF5;
-    --accent-color: #39FAFF;
-    --background-light: #C0D2F5;
-    --text-color: #333;
+    --primary-color: #2c3e50; /* Dunkles Blau-Grau */
+    --secondary-color: #7f8c8d; /* Graublau */
+    --accent-color: #1abc9c; /* Türkis als dezenter Akzent */
+    --background-light: #f9f9f9; /* Sehr helles Grau für Hintergrund */
+    --text-color: #222; /* Sehr dunkles Grau für Text */
 }
 
-/* Hintergrundfarbe */
 body {
-    background-color: var(--background-light) !important;
-    color: var(--text-color) !important;
-    font-family: Arial, sans-serif !important;
+    margin-top: 0;
+    background-color: var(--background-light);
+    color: var(--text-color);
+    font-family: Arial, sans-serif;
 }
 
-/* Navigation */
 .navbar {
-    background-color: var(--primary-color) !important;
+    background-color: white;
+    border-bottom: 1px solid #ddd;
 }
 
-.navbar-brand, .nav-link {
-    color: white !important;
+.navbar-brand {
+    font-weight: bold;
+    color: var(--primary-color) !important;
+}
+
+.navbar-nav .nav-link {
+    color: var(--primary-color) !important;
 }
 
 .navbar-nav .nav-link:hover {
     color: var(--accent-color) !important;
 }
 
-/* Hauptüberschriften */
 h1, h2 {
-    color: var(--primary-color) !important;
+    color: var(--primary-color);
 }
 
-/* Links */
 a {
-    color: var(--primary-color) !important;
+    color: var(--primary-color);
     text-decoration: none;
 }
 
 a:hover {
-    color: var(--secondary-color) !important;
+    color: var(--accent-color);
 }
 
-/* Buttons */
 .btn-primary {
-    background-color: var(--primary-color) !important;
-    border: none !important;
-    color: white !important;
+    background-color: var(--primary-color);
+    border: none;
+    color: white;
 }
 
 .btn-primary:hover {
-    background-color: var(--secondary-color) !important;
+    background-color: var(--secondary-color);
 }
 
-/* Projekte-Cards */
 .card {
-    background-color: white !important;
-    border: 2px solid var(--primary-color) !important;
-    border-radius: 10px !important;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
 
 .card-title {
-    color: var(--primary-color) !important;
+    color: var(--primary-color);
 }
 
-/* Footer */
 footer {
-    background-color: var(--primary-color) !important;
-    color: white !important;
-    padding: 15px 0 !important;
-    text-align: center !important;
+    background-color: white;
+    color: var(--text-color);
+    border-top: 1px solid #ddd;
+    padding: 15px 0;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .about-section {
+        flex-direction: column;
+    }
+
+    .about-section img {
+        margin-bottom: 20px;
+    }
 }
